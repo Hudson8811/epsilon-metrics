@@ -14,4 +14,16 @@ body {
   padding: 0 115px;
   margin: 0 auto;
   max-width: 100%;
+
+  @include max("lg") {
+    padding: 0 50px;
+  }
+
+  @include max("sm") {
+    padding: 0 20px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

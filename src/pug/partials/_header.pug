@@ -1,1 +1,22 @@
 header.header
+  .container
+    .header-wrapper
+      a(href="./").header-logo
+        img(src="./images/logo.svg", alt="EPSILON METRICS").header-logo__item
+      
+      nav.header-nav
+        ul.header-nav__list
+          - 
+            const headerLinks = [
+              { text: 'Платформа' },
+              { text: 'Решения' },
+              { text: 'Компания' },
+            ];
+          each link in headerLinks
+            li.header-nav__item
+              a(href=link.href?link.href:'#').link.header-nav__link=link.text
+      
+      button(type="button").burger
+        span.burger__line
+        span.burger__line.burger__line--mid
+        span.burger__line
