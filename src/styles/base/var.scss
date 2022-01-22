@@ -1,0 +1,23 @@
+/* media */
+$media-list: (
+  "xxs": 375,
+  "xs": 560,
+  "sm": 767,
+  "md": 1079,
+  "lg": 1279,
+  "xl": 1599,
+  "xxl": 1900,
+);
+
+/* шрифты */
+$fontPrimary: "Manrope", sans-serif;
+$fontSecondary: "Oswald", sans-serif;
+
+/* цвета */
+$black: #000000;
+$white: #ffffff;
+$orange: #fb5d01;
+$quartz: #4a4a4a;
+$granite: #616161;
+$grey: #4f4f4f;
+$charcoal: #2f2f2f;

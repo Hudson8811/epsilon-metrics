@@ -1,0 +1,17 @@
+html {
+  font-family: $fontPrimary;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+}
+body {
+  color: $black;
+}
+
+.container {
+  width: 1400px;
+  padding: 0 115px;
+  margin: 0 auto;
+  max-width: 100%;
+}
