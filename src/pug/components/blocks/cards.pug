@@ -8,7 +8,7 @@ mixin cards(content)
           if content.subtitle
             p.cards__subtitle=content.subtitle
         
-        p.cards__description=content.description
+        p.cards__description!=content.description
 
         if content.cards.highlight
           p.cards__highlight=content.cards.highlight

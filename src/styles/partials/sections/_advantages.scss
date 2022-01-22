@@ -13,5 +13,10 @@
     &__highlight {
       font-weight: 700;
     }
+
+    &__item {
+      border-color: transparent;
+      background-color: $blue;
+    }
   }
 }
