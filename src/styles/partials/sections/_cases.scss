@@ -1,8 +1,6 @@
-.company {
-  z-index: 1;
-  padding: 49px 0 58px;
-  color: $white;
-  background-color: $orange;
+.cases {
+  padding: 83px 0 87px;
+  background-color: $cultured;
   overflow: hidden;
 
   @include max("sm") {
@@ -22,7 +20,7 @@
     position: relative;
     z-index: 2;
     max-width: 595px;
-    margin-left: auto;
+    margin-right: auto;
 
     @include max("lg") {
       max-width: 52%;
@@ -33,31 +31,19 @@
     }
   }
 
-  &__title {
-    margin-bottom: 13px;
-  }
-
-  &__description {
-    font-weight: 500;
-  }
-
   &__button {
-    margin-top: 24px;
+    margin-top: 29px;
   }
 
   &__image {
     position: absolute;
-    top: 20px;
-    left: -107px;
+    top: -26px;
+    right: 0;
     z-index: 1;
-    width: 52%;
+    width: 42%;
 
     @media screen and (min-width: 1400px) {
-      width: 632px;
-    }
-
-    @include max("lg") {
-      left: -70px;
+      width: 499px;
     }
 
     @include max("sm") {
@@ -74,6 +60,6 @@
   }
 
   p + p {
-    margin-top: 13px;
+    margin-top: 16px;
   }
 }
