@@ -1,0 +1,23 @@
+.button {
+  display: inline-block;
+  padding: 16px 33px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  border: none;
+  border-radius: 5px;
+  color: $white;
+  background-color: $orange;
+  cursor: pointer;
+
+  @include hover {
+    background-color: $buttonHoverColor;
+  }
+
+  @include max("sm") {
+    font-size: 18px;
+  }
+}

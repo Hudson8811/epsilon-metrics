@@ -1,0 +1,110 @@
+.hero {
+  z-index: 1;
+  margin-top: 82px;
+  overflow: hidden;
+
+  @include max("lg") {
+    margin-top: 58px;
+  }
+
+  &-wrapper {
+    position: relative;
+    padding: 95px 0;
+
+    @include max("sm") {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 45px 0;
+    }
+  }
+
+  &-info {
+    position: relative;
+    z-index: 2;
+    max-width: 589px;
+
+    @include max("xs") {
+      max-width: 320px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 27px;
+
+    @include max("sm") {
+      margin-bottom: 20px;
+    }
+
+    &-small {
+      display: inline-block;
+      margin-bottom: 21px;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.1;
+
+      @include max("sm") {
+        margin-bottom: 10px;
+        font-size: 26px;
+      }
+
+      @include max("xs") {
+        font-size: 20px;
+      }
+    }
+
+    &-large {
+      font-family: $fontSecondary;
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 1.08;
+      text-transform: uppercase;
+
+      @include max("sm") {
+        font-size: 42px;
+      }
+
+      @include max("xs") {
+        font-size: 28px;
+      }
+    }
+  }
+
+  &__description {
+    max-width: 340px;
+    margin-bottom: 28px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $granite;
+
+    @include max("sm") {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 28px;
+    right: -88px;
+    z-index: 1;
+    width: 644px;
+
+    @include max("lg") {
+      right: -100px;
+    }
+
+    @include max("sm") {
+      position: static;
+      width: 100%;
+      margin-bottom: 35px;
+    }
+
+    &-item {
+      object-fit: cover;
+
+      @include max("sm") {
+        margin: 0 auto;
+      }
+    }
+  }
+}
