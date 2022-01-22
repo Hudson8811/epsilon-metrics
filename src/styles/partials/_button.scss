@@ -20,4 +20,14 @@
   @include max("sm") {
     font-size: 18px;
   }
+
+  &--secondary {
+    border: 1px solid $white;
+    background-color: transparent;
+
+    @include hover {
+      color: $orange;
+      background-color: $white;
+    }
+  }
 }

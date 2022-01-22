@@ -1,0 +1,75 @@
+.company {
+  z-index: 1;
+  padding: 49px 0 58px;
+  color: $white;
+  background-color: $orange;
+  overflow: hidden;
+
+  &-wrapper {
+    position: relative;
+
+    @include max("sm") {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-info {
+    position: relative;
+    z-index: 2;
+    max-width: 595px;
+    margin-left: auto;
+
+    @include max("lg") {
+      max-width: 52%;
+    }
+
+    @include max("sm") {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 13px;
+  }
+
+  &__description {
+    font-weight: 500;
+  }
+
+  &__button {
+    margin-top: 24px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 20px;
+    left: -107px;
+    z-index: 1;
+    width: 52%;
+
+    @media screen and (min-width: 1400px) {
+      width: 632px;
+    }
+
+    @include max("lg") {
+      left: -70px;
+    }
+
+    @include max("sm") {
+      position: static;
+      margin-bottom: 45px;
+      width: 100%;
+    }
+
+    &-item {
+      @include max("sm") {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  p + p {
+    margin-top: 13px;
+  }
+}
