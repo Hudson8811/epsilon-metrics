@@ -1,0 +1,17 @@
+.advantages {
+  padding-bottom: 70px;
+  background: url("../images/advantages.svg") no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: $lazuli;
+
+  @include max("lg") {
+    background-size: cover;
+  }
+
+  .cards {
+    &__highlight {
+      font-weight: 700;
+    }
+  }
+}

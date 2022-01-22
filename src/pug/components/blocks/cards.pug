@@ -1,0 +1,26 @@
+mixin cards(content)
+  section.cards(class=content.name + (content.light?' cards--light':''))
+    .container
+      .cards__text
+        .cards__title
+          h2.title=content.title
+
+          if content.subtitle
+            p.cards__subtitle=content.subtitle
+        
+        p.cards__description=content.description
+
+        if content.cards.highlight
+          p.cards__highlight=content.cards.highlight
+
+      .cards__wrapper
+        each item in content.cards.items
+          .cards__item
+            .cards__item-icon
+              img(src=`images/${item.icon.src}`, alt=item.icon.alt?item.icon.alt:'')
+            
+            if item.title
+              p.cards__item-title=item.title
+            
+            p.cards__item-description=item.description
+

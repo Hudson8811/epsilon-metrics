@@ -1,0 +1,95 @@
+.cards {
+  padding: 47px 0 60px;
+
+  @include max("sm") {
+    padding: 45px 0;
+  }
+
+  &--light {
+    color: $white;
+
+    .cards {
+      &__item {
+        &-title,
+        &-description {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 34px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+
+    @include max("sm") {
+      font-size: 18px;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+  }
+
+  &__highlight {
+    margin-top: 25px;
+    font-weight: 600;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include max("sm") {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    width: 32%;
+    padding: 30px;
+    border-radius: 7px;
+    background-color: $blue;
+
+    @media screen and (min-width: 1400px) {
+      width: 370px;
+    }
+
+    @include max("lg") {
+      padding: 15px;
+    }
+
+    @include max("sm") {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    &-icon {
+      width: 56px;
+      margin-bottom: 14px;
+    }
+
+    &-title {
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.4;
+      color: $orange;
+    }
+
+    &-description {
+      font-weight: 500;
+      color: $grey;
+    }
+  }
+}
