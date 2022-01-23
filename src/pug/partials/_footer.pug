@@ -1,1 +1,98 @@
 footer.footer
+  .container
+    .footer-wrapper
+      a(href="./").logo.footer__logo
+        img(src="./images/logo.png", alt="EPSILON METRICS").logo__item
+      
+      .footer-nav.footer__nav
+        -
+          const lists = [
+            {
+              title: 'Информация', 
+              links: [
+                { text: 'Возможности' },
+                { text: 'Как это работает' },
+                { text: 'Применение' },
+                { text: 'Демонстрация' },
+              ],
+            },
+            {
+              title: 'О компании', 
+              links: [
+                { text: 'Платформа' },
+                { text: 'Решения' },
+                { text: 'Контакты' },
+                { text: 'Компания' },
+                { text: 'Возможности' },
+                { text: 'Как это работает' },
+                { text: 'Применение' },
+                { text: 'Демонстрация' },
+                { text: 'Возможности' },
+                { text: 'Как это работает' },
+              ],
+            },
+            {
+              title: 'Информация', 
+              links: [
+                { text: 'Возможности' },
+                { text: 'Как это работает' },
+                { text: 'Применение' },
+                { text: 'Демонстрация' },
+                { text: 'Возможности' },
+                { text: 'Как это работает' },
+              ],
+            },
+            {
+              title: 'Информация', 
+              links: [
+                { text: 'Возможности' },
+                { text: 'Как это работает' },
+                { text: 'Применение' },
+                { text: 'Демонстрация' },
+              ],
+            },
+            {
+              title: 'О компании', 
+              links: [
+                { text: 'Платформа' },
+                { text: 'Решения' },
+                { text: 'Контакты' },
+                { text: 'Компания' },
+              ],
+            },
+            {
+              title: 'Информация', 
+              links: [
+                { text: 'Возможности' },
+                { text: 'Как это работает' },
+                { text: 'Применение' },
+                { text: 'Демонстрация' },
+              ],
+            },
+            {
+              title: 'О компании', 
+              links: [
+                { text: 'Платформа' },
+                { text: 'Решения' },
+                { text: 'Контакты' },
+                { text: 'Компания' },
+              ],
+            },
+          ];
+        each list, index in lists
+          section.footer-nav__section(class=`footer-nav__section--${index + 1}` data-order=index+1 data-column=index+1 data-row=Math.ceil((index+1) / 4))
+            h3.footer-nav__title=list.title
+            ul.footer-nav__list
+              each item in list.links
+                li.footer-nav__item
+                  a(href=item.href?item.href:'#').link.footer-nav__link=item.text 
+
+  .footer-bar
+    .container
+      .footer-bar__wrapper
+        span.footer-bar__section
+          | 2022 Все права защищены
+
+
+//- grid-column: 2 /3;
+//- grid-row: 1 / 3;

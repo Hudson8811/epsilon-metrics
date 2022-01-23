@@ -1,0 +1,11 @@
+.logo {
+  width: 193px;
+
+  @include max("lg") {
+    width: 100px;
+  }
+
+  &__item {
+    object-fit: contain;
+  }
+}
