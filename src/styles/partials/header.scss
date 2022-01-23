@@ -29,13 +29,10 @@
   &-logo {
     position: relative;
     z-index: 2;
-    width: 142px;
+    width: 193px;
 
     @include max("lg") {
-      width: 80px;
-    }
-
-    @include max("sm") {
+      width: 100px;
     }
 
     &__item {

@@ -1,8 +1,8 @@
 .company {
   z-index: 1;
   padding: 49px 0 58px;
-  color: $white;
-  background-color: $orange;
+  // color: $white;
+  background-color: $cultured;
   overflow: hidden;
 
   @include max("sm") {

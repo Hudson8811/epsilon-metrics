@@ -14,20 +14,26 @@ $fontPrimary: "Manrope", sans-serif;
 $fontSecondary: "Oswald", sans-serif;
 
 /* цвета */
-$black: #000000;
-$white: #ffffff;
-$orange: #fb5d01;
-$quartz: #4a4a4a;
-$granite: #616161;
+$black: #333333; // +
+$white: #ffffff; // +
+$orange: #ff7f49; // +
+$quartz: #4a4a4a; // +
+$granite: #616161; // +
 $grey: #4f4f4f;
 $charcoal: #2f2f2f;
 $gainsboro: #dfdfdf;
-$lazuli: #1a5a98;
-$blue: #175189;
+$blue: #353993; // +
+$violet: #3b40a5;
 $silver: #c8c8c8;
 $cultured: #f8f8f8;
 
-$buttonHoverColor: rgba(251, 93, 1, 0.7);
+$buttonHoverColor: rgba(255, 127, 73, 0.7);
+
+/*
+** Deprecated colors **
+$lazuli: #1a5a98;
+
+*/
 
 /* other */
 $transition: 0.3s linear;
