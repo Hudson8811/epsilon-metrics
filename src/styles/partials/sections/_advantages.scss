@@ -9,6 +9,10 @@
     background-size: cover;
   }
 
+  @include max("sm") {
+    padding: 45px 0;
+  }
+
   .cards {
     &__highlight {
       font-weight: 700;

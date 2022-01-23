@@ -12,6 +12,7 @@
   color: $white;
   background-color: $orange;
   cursor: pointer;
+  user-select: none;
 
   @include hover {
     background-color: $buttonHoverColor;

@@ -1,0 +1,17 @@
+.contacts {
+  padding: 49px 0 46px;
+  color: $white;
+  background-color: $violet;
+
+  @include max("sm") {
+    padding: 45px 0;
+  }
+
+  &__heading {
+    margin-bottom: 34px;
+  }
+
+  &__description {
+    margin-top: 13px;
+  }
+}

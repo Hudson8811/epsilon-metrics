@@ -1,3 +1,7 @@
 .usage {
   padding-bottom: 50px;
+
+  @include max("sm") {
+    padding: 45px 0;
+  }
 }
