@@ -3,6 +3,7 @@ function footer() {
     SIZES = {
       'sm': 767,
       'lg': 1279,
+      'xl': 1399,
     };
 
   const sections = document.querySelectorAll('.footer-nav__section'),
