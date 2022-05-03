@@ -3,11 +3,11 @@ mixin cards(content)
     .container
       .cards__text
         .cards__title
-          h2.title=content.title
 
           if content.subtitle
             p.cards__subtitle=content.subtitle
-        
+          h2.title=content.title
+
         p.cards__description!=content.description
 
         if content.cards.highlight
@@ -23,4 +23,4 @@ mixin cards(content)
               p.cards__item-title=item.title
             
             p.cards__item-description=item.description
-
+		

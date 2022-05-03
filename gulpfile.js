@@ -3,7 +3,7 @@ const { src, dest, parallel, series, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
@@ -16,11 +16,10 @@ const pug = require('gulp-pug');
 const rigger = require('gulp-rigger');
 const svgstore = require("gulp-svgstore");
 const rename = require("gulp-rename");
-const babel = require("gulp-babel");
 
 function browsersync() {
 	browserSync.init({ // Инициализация Browsersync
-		server: { baseDir: 'build/' }, // Указываем папку сервера
+		server: { baseDir: 'public/' }, // Указываем папку сервера
 		notify: false, // Отключаем уведомления
 		online: true, // Режим работы: true или false
 		host: 'localhost',
@@ -41,7 +40,7 @@ function pugHtml() {
 	return src('src/pug/pages/*.pug')
 		.pipe(plumber())
 		.pipe(pug({ pretty: true}))
-		.pipe(dest('build/'))
+		.pipe(dest('public/'))
 		.pipe(browserSync.stream())
 }
 
@@ -54,14 +53,9 @@ function scripts() {
 		.pipe(rigger())
 		.pipe(sourcemaps.init())
 		.pipe(concat('main.min.js'))
-		.pipe(
-      babel({
-        presets: ["@babel/env"],
-      })
-    )
 		.pipe(uglify())
 		.pipe(sourcemaps.write('./maps'))
-		.pipe(dest('build/js/'))
+		.pipe(dest('public/js/'))
 		.pipe(browserSync.stream())
 }
 
@@ -74,20 +68,20 @@ function styles() {
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
 		.pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } ))
 		.pipe(sourcemaps.write('./maps'))
-		.pipe(dest('build/css/'))
+		.pipe(dest('public/css/'))
 		.pipe(browserSync.stream())
 }
 
 function fonts() {
 	return src('src/fonts/**/*.{eot,svg,ttf,woff,woff2}')
 		.pipe(plumber())
-		.pipe(dest('build/fonts/'))
+		.pipe(dest('public/fonts/'))
 }
 
 function images() {
 	return src('src/images/**/*')
 		.pipe(plumber())
-		.pipe(newer('build/images/'))
+		.pipe(newer('public/images/'))
 		.pipe(imagemin([
 			imagemin.gifsicle({interlaced: true}),
 			imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -99,7 +93,7 @@ function images() {
 				]
 			})
 		]))
-		.pipe(dest('build/images/'))
+		.pipe(dest('public/images/'))
 		.pipe(browserSync.stream())
 }
 
@@ -121,16 +115,16 @@ function icons() {
 				inlineSvg: true
 			}))
 			.pipe(rename('sprite.svg'))
-			.pipe(dest('build/images/'))
+			.pipe(dest('public/images/'))
 			.pipe(browserSync.stream())
 }
 
 function cleanimg() {
-	return del('build/images/**/*', { force: true })
+	return del('public/images/**/*', { force: true })
 }
 
 function cleandist() {
-	return del('build/**/*', { force: true })
+	return del('public/**/*', { force: true })
 }
 
 

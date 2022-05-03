@@ -21,7 +21,7 @@
   &-info {
     position: relative;
     z-index: 2;
-    max-width: 595px;
+    max-width: 650px;
     margin-left: auto;
 
     @include max("lg") {
@@ -39,6 +39,33 @@
 
   &__description {
     font-weight: 500;
+	 margin-bottom: 11px;
+  }
+
+  &__list {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #333333;
+	 display: flex;
+	 flex-direction: column;
+	 gap: 4px;
+  }
+
+  &__item {
+	 position: relative;
+	 padding-left: 30px;
+    &::before{
+		 content:'';
+		 position: absolute;
+		 top: 0;
+		 left: 0;
+		 width: 22px;
+		 height: 22px;
+		 background: url('../images/company1-icon.svg') 0 0 no-repeat;
+	 }
   }
 
   &__button {
@@ -51,7 +78,9 @@
     left: -107px;
     z-index: 1;
     width: 52%;
-
+	 height: 100%;
+	 display: flex;
+	 align-items: center;
     @media screen and (min-width: 1400px) {
       width: 632px;
     }
