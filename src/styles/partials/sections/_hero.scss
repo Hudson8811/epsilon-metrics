@@ -1,113 +1,110 @@
 .hero {
-  z-index: 1;
-  margin-top: 136px;
-  overflow: hidden;
+	z-index: 1;
+	margin-top: 136px;
+	overflow: hidden;
 
-  @include max("lg") {
-    margin-top: 82px;
-  }
+	@include max("lg") {
+		margin-top: 82px;
+	}
 
-  &-wrapper {
-    position: relative;
-    padding: 95px 0;
+	&-wrapper {
+		position: relative;
+		padding: 95px 0;
 
-    @include max("sm") {
-      display: flex;
-      flex-direction: column-reverse;
-      padding: 45px 0;
-    }
-  }
+		@include max("sm") {
+			display: flex;
+			flex-direction: column-reverse;
+			padding: 45px 0;
+		}
+	}
 
-  &-info {
-    position: relative;
-    z-index: 2;
-    max-width: 700px;
+	&-info {
+		position: relative;
+		z-index: 2;
+		max-width: 700px;
 
-    @include max("xs") {
-      max-width: 320px;
-    }
-  }
+		@include max("xs") {
+			max-width: 320px;
+		}
+	}
 
-  &__title {
-    margin-bottom: 27px;
+	&__title {
+		margin-bottom: 27px;
 
-    @include max("sm") {
-      margin-bottom: 20px;
-    }
+		@include max("sm") {
+			margin-bottom: 20px;
+		}
 
-    &-small {
-      display: inline-block;
-      margin-bottom: 21px;
-      font-weight: 700;
-      font-size: 36px;
-      line-height: 1.1;
+		&-small {
+			display: inline-block;
+			margin-bottom: 21px;
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 1.1;
 
-      @include max("sm") {
-        margin-bottom: 10px;
-        font-size: 26px;
-      }
+			@include max("sm") {
+				margin-bottom: 10px;
+				font-size: 26px;
+			}
 
-      @include max("xs") {
-        font-size: 20px;
-      }
-    }
+			@include max("xs") {
+				font-size: 20px;
+			}
+		}
 
-    &-large {
-      font-family: $fontSecondary;
-      font-weight: 700;
-      font-size: 60px;
-      line-height: 1.08;
-      text-transform: uppercase;
+		&-large {
+			font-family: $fontSecondary;
+			font-weight: 700;
+			font-size: 60px;
+			line-height: 1.08;
+			text-transform: uppercase;
 
-      @include max("sm") {
-        font-size: 42px;
-      }
+			@include max("sm") {
+				font-size: 42px;
+			}
 
-      @include max("xs") {
-        font-size: 28px;
-      }
-    }
-  }
+			@include max("xs") {
+				font-size: 28px;
+			}
+		}
+	}
 
-  &__description {
-    max-width: 500px;
-    margin-bottom: 28px;
-    font-size: 20px;
-    line-height: 1.4;
-    color: $granite;
+	&__description {
+		max-width: 500px;
+		margin-bottom: 28px;
+		font-size: 20px;
+		line-height: 1.4;
+		color: $granite;
 
-    @include max("sm") {
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-  }
+		@include max("sm") {
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
+	}
 
-  &__image {
-    position: absolute;
-    top: 28px;
-    right: -116px;
-    z-index: 1;
-    width: 644px;
-    img {
-		 width: 100%;
-		 height: 100%;
-	 }
-    @include max("lg") {
-      right: -116px;
-    }
+	&__image {
+		position: absolute;
+		top: 28px;
+		z-index: 1;
+		width: 644px;
+		left: 642px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
 
-    @include max("sm") {
-      position: static;
-      width: 100%;
-      margin-bottom: 35px;
-    }
+		@include max("sm") {
+			position: static;
+			width: 100%;
+			margin-bottom: 35px;
+		}
 
-    &-item {
-      object-fit: cover;
+		&-item {
+			object-fit: cover;
 
-      @include max("sm") {
-        margin: 0 auto;
-      }
-    }
-  }
+			@include max("sm") {
+				margin: 0 auto;
+			}
+		}
+	}
 }

@@ -77,16 +77,18 @@
     top: 20px;
     left: -107px;
     z-index: 1;
-    width: 52%;
 	 height: 100%;
 	 display: flex;
 	 align-items: center;
+	  width: 37vw;
+
     @media screen and (min-width: 1400px) {
       width: 632px;
     }
 
     @include max("lg") {
       left: -70px;
+	  width: 52%;
     }
 
     @include max("sm") {
